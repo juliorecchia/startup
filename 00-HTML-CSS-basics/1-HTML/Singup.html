@@ -11,39 +11,60 @@
 	<body>
 		<h2>Ejercicio 1.vi</h2>
 		<h1>Sing up</h1>
-	<form>
-		Fist name: <br>
-		<input type="text" name="firstname" required="yes"> *
-		<br>
-		Last name: <br>
-		<input type="text" name="lastname" required="yes"> *
-		<br>
-		Email: <br>
-		<input type="email" name="email" required="yes"> *
-		
-		<br>
-		Birthday:<br> 
-		<input type="date" name="bday" required="yes"> 
-		<br>
-		<br>
-		Favorite sport:	<select>
-			<option value="">Selec one</option>
-			<option value="tennis">Tennis</option>
-			<option value="hockey">Hockey</option>
-			<option value="football">Football</option>
-			<option value="rugby">Rugby</option>
-			<option value="basketball">Basketball</option>
-			<option value="otro">Otros</option>
-		</select>
-		<br>
-		<br>
-		<textarea maxlength="256"> Small bio of you...</textarea>
-		<br>
-		<br>
-		<input type="submit" value="Submit"> <input type="reset" value="Reset!" onclick="alert('are you sure you want to delete all form data ')">
-		
-		<p style="color:red"> * Fields are mandatory</p>
+	<form style="font-family: Arial">
+		<fieldset class="Informacion">
+			<label>
+				Fist name: 
+				<input type="text" name="firstname" required> *
+			</label>
+			<br>
+			<br>
+			<label>
+				Last name:
+				<input type="text" name="lastname" required> *
+			</label>
+			<br>
+			<br>
+			<label>
+				Email:
+				<input type="email" name="email" required placeholder="name@domain.com"> *
+			</label>
+			<br>
+			<br>
+			<label>
+				Birthday: 
+				<input type="date" name="bday" required> 
+			</label>
+			<br>
+			<br>
+			<label>
+				Favorite sport:	
+				<select>
+					<option value="">Select one</option>
+					<option value="tennis">Tennis</option>
+					<option value="hockey">Hockey</option>
+					<option value="football">Football</option>
+					<option value="rugby">Rugby</option>
+					<option value="basketball">Basketball</option>
+					<option value="otro">Otros</option>
+				</select>
+			</label>
+			<br>
+			<br>
+			<label>
+				<textarea maxlength="256"> Small bio of you...</textarea>
+			</label>
+			<br>		
+		</fieldset>
+		<fieldset class="accion">
+			<label>
+				<input type="submit" value="Submit">
+			</label>
+			<label>
+				<input type="reset" value="Reset!" onclick="alert('are you sure you want to delete all form data ')">
+			</label>
+			<p style="color:red"> * Fields are mandatory</p>
+		</fieldset>		
 	</form>
-	</body>
-	
+	</body>	
 </html>
