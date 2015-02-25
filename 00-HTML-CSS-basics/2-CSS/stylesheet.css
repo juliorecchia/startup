@@ -54,9 +54,10 @@ color: white;
   padding: 10px;
   margin-right: 5px auto;
   margin-left: 5px auto;
+  width: 17% ;
   margin-top: 15px;
   margin-bottom: 15px ;
-  width: 17% ;  
+    
   vertical-align: top;
   }
 .navigation{font-size: 12px;}
