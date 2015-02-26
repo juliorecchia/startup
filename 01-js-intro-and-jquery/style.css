@@ -1,0 +1,11 @@
+*{text-align: center;}
+
+.hidden {
+display: none;
+}
+p{
+	color: blue;
+	font-family: Arial;
+	font-size: 35px;
+	background-color: black;
+}
