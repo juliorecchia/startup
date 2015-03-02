@@ -23,6 +23,12 @@ MovieObserver=function()
 }
 Mo=new MovieObserver();
 
+DownloadableMovie = function(){
+   
+   movie.download(this.titulo);
+ 
+  }
+
 movie =function(titulo,genero)
 {
 	this.titulo=titulo;
@@ -41,20 +47,26 @@ movie =function(titulo,genero)
 	{
 	console.log("Titulo pelicula: "+this.titulo+", Genero: "+this.genero);
 	}
-	this.play=function(){		
-
+	this.play=function()
+	{		
 		Mo.playing(this.titulo);
 	}
-	this.stop=function(){
+	this.stop=function()
+	{
 		Mo.stopped(this.titulo);
 	}
-	this.actor=function(actor){
-
-		a=[actor1,actor2];
-
+	this.download=function()
+	{
+		console.log("Descargando: "+this.titulo);
 	}
-		
+	//this.actor=function(actor)
+	//{
+
+	//	a=[actor1,actor2];
+
+	//}		
 }
+
 </script>
 
 </body>
