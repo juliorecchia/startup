@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<<html>
+<head>
+	<title></title>
+	<script data-main="scripts/main" src="scripts/require.js"></script>
+	<meta charset="utf-8">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+</head>
+<body>
+	<script>
+		define('module_movie',["module_director"]
+			
+			{
+			movie =function(titulo,genero)
+			{
+				this.titulo=titulo;
+				this.genero=genero;
+
+				var titulo;
+				var genero;
+				var director;
+				
+				this.set=function(titulo,genero)
+				{ 
+					this.titulo=titulo;
+					this.genero=genero;
+				}
+				this.get=function()
+				{
+				console.log("Titulo pelicula: "+this.titulo+", Genero: "+this.genero);
+				}
+				this.addDirector=function(director)
+				{
+		 			//codigo para agregar director a la peli
+ 					
+				}	
+			}
+			);
+
+		define("module_director"{
+
+				director =function(name)
+				{
+					this.name=name;
+
+					var name;
+					this.quotes=[];
+				
+					this.set=function(name)
+					{ 
+						this.name=name;
+					}
+					this.get=function()
+					{
+					console.log("Director: "+this.name);
+					}
+					this.speak=function()
+					{
+						console.log()
+					}
+					this.addQuotes=function(quote)
+					{
+						this.qoutes.push(quote);
+						return this;
+					{
+				}
+				addDirectorQuotes=function(){
+
+					director.addQuotes(this.quote); 
+					}		
+				}
+
+				}
+			);
+	</script>
+
+</body>
+</html>
