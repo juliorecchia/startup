@@ -1,77 +1,31 @@
 <!DOCTYPE html>
-<<html>
+<html>
 <head>
 	<title></title>
-	<script data-main="scripts/main" src="scripts/require.js"></script>
+	<script   src="http://requirejs.org/docs/release/2.1.16/comments/require.js"></script>
 	<meta charset="utf-8">
  	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+ 	<script type="text/javascript" src="scripts/movie.js"></script>
+ 	<script type="text/javascript" src="scripts/director.js"></script>
 </head>
 <body>
 	<script>
-		define('module_movie',["module_director"]
-			
+	require(['modulo_movie','modulo_director'],function (modulo_movie,modulo_movie) {
+			require.ready(function()
 			{
-			movie =function(titulo,genero)
-			{
-				this.titulo=titulo;
-				this.genero=genero;
+				var mov = require('scripts/movie');
+				var dir = require('scripts/director');
 
-				var titulo;
-				var genero;
-				var director;
-				
-				this.set=function(titulo,genero)
-				{ 
-					this.titulo=titulo;
-					this.genero=genero;
-				}
-				this.get=function()
+				function punto6()
 				{
-				console.log("Titulo pelicula: "+this.titulo+", Genero: "+this.genero);
+
+					movie.set(titulo,genero);
+					director.set(name);
+					director.addQuotes(quote);
+					movie.addDirector(name);
 				}
-				this.addDirector=function(director)
-				{
-		 			//codigo para agregar director a la peli
- 					
-				}	
-			}
-			);
-
-		define("module_director"{
-
-				director =function(name)
-				{
-					this.name=name;
-
-					var name;
-					this.quotes=[];
-				
-					this.set=function(name)
-					{ 
-						this.name=name;
-					}
-					this.get=function()
-					{
-					console.log("Director: "+this.name);
-					}
-					this.speak=function()
-					{
-						console.log()
-					}
-					this.addQuotes=function(quote)
-					{
-						this.qoutes.push(quote);
-						return this;
-					{
-				}
-				addDirectorQuotes=function(){
-
-					director.addQuotes(this.quote); 
-					}		
-				}
-
-				}
-			);
+			});
+		});		
 	</script>
 
 </body>
