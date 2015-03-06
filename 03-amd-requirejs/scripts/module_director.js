@@ -1,4 +1,4 @@
-/*define("module_director",function(module_movie)
+define("module_director",function(module_movie)
 		{
 				director =function(name)
 				{
@@ -29,5 +29,6 @@
 					{
 						director.addQuotes(this.quote); 
 					}	
-					
-		});*/
+					return module_director;
+
+		});

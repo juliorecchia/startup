@@ -2,27 +2,31 @@
 <html>
 <head>
 	<title></title>
-	<script   src="http://requirejs.org/docs/release/2.1.16/comments/require.js"></script>
+	<script   data-main="scripts/main" src="http://requirejs.org/docs/release/2.1.16/comments/require.js"></script>
 	<meta charset="utf-8">
  	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
- 	<script type="text/javascript" src="scripts/movie.js"></script>
- 	<script type="text/javascript" src="scripts/director.js"></script>
+ 	<!--<script type="text/javascript" src="scripts/movie.js"></script>
+ 	<script type="text/javascript" src="scripts/director.js"></script> -->
 </head>
 <body>
-	<script>
-	require(['modulo_movie','modulo_director'],function (modulo_movie,modulo_movie) {
+
+		<script type="text/javascript">
+				require(['main'],function(){
+					require(['module_movie']);
+				});
+		
+	
+	require(['module_movie'/*,'module_director'*/],function (modulo_movie) {
 			require.ready(function()
 			{
 				var mov = require('scripts/movie');
-				var dir = require('scripts/director');
+				/*var dir = require('scripts/director');*/
 
 				function punto6()
-				{
-
-					movie.set(titulo,genero);
-					director.set(name);
-					director.addQuotes(quote);
-					movie.addDirector(name);
+				{	movie.set(titulo,genero);
+					//director.set(name);
+					//director.addQuotes(quote);
+					//movie.addDirector(name);
 				}
 			});
 		});		

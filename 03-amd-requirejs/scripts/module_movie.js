@@ -1,4 +1,4 @@
-define('module_movie',["main"/*,"module_director"*/],function(main)
+define('module_movie',["main","module_director"],function(main)
 {			
 			movie =function(titulo,genero)
 			{
@@ -18,11 +18,11 @@ define('module_movie',["main"/*,"module_director"*/],function(main)
 				{
 				console.log("Titulo pelicula: "+this.titulo+", Genero: "+this.genero);
 				}
-				/*this.addDirector=function(director)
+				this.addDirector=function(director)
 				{
 		 			//codigo para agregar director a la peli
  					
-				}	*/				
+				}					
 			}
 			return module_movie;
 });
