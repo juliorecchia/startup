@@ -7,8 +7,17 @@
 	<script src="libs/underscore.js" ></script>
 	<script src="libs/handlebars-v3.0.0.js"></script>
 	<script src="libs/node_modules/dust/dist/dust-full-0.3.0.min.js"></script>
+	<script src="temp/template1.js"></script>
 </head>
 <body>
+	<script id="entry-template" type="text/x-handlebars-template">
+	
+	<div>{{myProfile}}</div>
+	<div>{{#name fullName}}{/name}</div>
+	<div>{{dir}}</div>
+	<div>{{exp}}</div>
 
+	</script>
+	
 </body>
 </html>
