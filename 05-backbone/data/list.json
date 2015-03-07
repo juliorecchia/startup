@@ -1,0 +1,16 @@
+[
+	{
+		"name": "The fast and the furious",
+		"director": "Rob Cohen",
+		"actors":["Vin Diesel","Paul Walker","Michelle Rodriguez"],
+		"gender":"accion",
+		"score": "6.6"
+	}
+	{
+		"name": "Chappie",
+		"director": "Neil Blomkamp",
+		"actors":["Sharlto Copley","Dev Patel","Hugh Jackman","Sigourney Weaver"],
+		"gender":"accion",
+		"score": "4.8"
+	}	
+]
