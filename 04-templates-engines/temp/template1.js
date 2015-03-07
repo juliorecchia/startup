@@ -1,23 +1,44 @@
 
-var source=$("entry-template").html();
+$(document).ready(function(){
 
-var template=Handlebars.compile(source);
-
-var profile={[
-	firstName: "Julieta";
-	lastName: "Orecchia";
-	dir: "comechingones 174";
-	exp:"NADA";
-	]}
-Handlebars.registerHelper('name',function (firstName,lastName) {
-
-	lastName=Handlebars.Utils.escapeExpression(lastName);
-	firstName=Handlebars.Utils.escapeExpression(firstName);
-
-	var result= firstName+ " "+lastName;
-	return new Handlebars.SafeString(result); 	
-})
+	var source=$("#entry-template").html();
+	var template=Handlebars.compile(source);
 
 
-//var html= template(profile);
+	function readJson()
+	{
+		$.getJSON("data.json",function(data){
+
+			Handlebars.registerHelper('fullName',function (person) 
+			{
+				return person.firstName+" "+person.lastName;	
+			});	
+				$('body').append(template(html));
+		});
+	}
+	//var data = $.getJSON({ 
+	//		url: 'data.json'
+	//	});
+	
+	/*data.done(function(profile)
+	{
+		var ctx = {};
+		ctx.data = profile;
+		var html= template(ctx);
+		
+		Handlebars.registerHelper('fullName',function (person) 
+		{
+			return person.firstName+" "+person.lastName;	
+		});	
+	
+		
+		$('body').append(template(html));
+	});
+*/
+	
+	
+
+});
+
+
 

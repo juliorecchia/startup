@@ -3,19 +3,23 @@
 <head>
 	<title>
 	</title>
-
+	<script  type="text/javascript"src="http://code.jquery.com/jquery-2.1.3.js"></script>
 	<script src="libs/underscore.js" ></script>
 	<script src="libs/handlebars-v3.0.0.js"></script>
 	<script src="libs/node_modules/dust/dist/dust-full-0.3.0.min.js"></script>
+	<script src="data.json"></script>
 	<script src="temp/template1.js"></script>
+	<meta charset="utf-8"/>
+	
+        
 </head>
 <body>
 	<script id="entry-template" type="text/x-handlebars-template">
 	
 	<div>{{myProfile}}</div>
-	<div>{{#name fullName}}{/name}</div>
-	<div>{{dir}}</div>
-	<div>{{exp}}</div>
+	<div><h1>Nombre :{{fullName author}}</h1></div>
+	<div><h2>Direccion: {{dir}}</h2></div>
+	<div><h3>Experiencia laboral: {{exp}}</h3></div>
 
 	</script>
 	
