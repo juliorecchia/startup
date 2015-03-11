@@ -1,0 +1,25 @@
+
+body{background-color: #BADA55;}
+#text {
+	width: 600px;
+	height: 120px;
+	border: 3px solid black;
+	padding: 5px;
+	font-family: Tahoma, sans-serif;
+	background-color: #F2F2F2;
+}
+.button{	
+	float: left;
+	margin: 5px;
+}
+
+#drop {
+  min-height: 100px;
+  width: 200px;
+  border: 3px dashed #F2F2F2;
+  margin: 10px;
+  padding: 10px;
+}
+p {
+  margin: 3px 0;
+}
