@@ -1,4 +1,4 @@
-function cancel(e) {
+/*function cancel(e) {
   if (e.preventDefault) {
     e.preventDefault();
   }
@@ -17,3 +17,17 @@ addEvent(drop, 'drop', function (e) {
   //this.innerHTML += '<p>' + e.dataTransfer.getData('Text') + '</p>';
   //return false;
 });
+*/
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+}

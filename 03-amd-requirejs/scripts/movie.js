@@ -24,5 +24,5 @@ define('module_movie',["main"/*,"module_director"*/],function(main)
  					
 				}	*/				
 			}
-			return module_movie;
+			return movie;
 });

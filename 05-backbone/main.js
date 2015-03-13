@@ -27,10 +27,13 @@ var  movie= Backbone.Model.extend(
 
 //collection
 var list_movie = Backbone.Collection.extend({
+    
     model: movie,
-    })
-var movies= new list_movie;
+    });
 
+var movies = new list_movie;
+
+// view
 
 
 
@@ -48,7 +51,7 @@ list_movie.Router = Backbone.Router.extend({
     },
   
     defaultRoute: function () {
-  2      console.log("defaultRoute");
+       console.log("defaultRoute");
         var movies = new list_movie.Collections.Movies()
         movies.fetch();
         console.log(movies.length)

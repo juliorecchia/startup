@@ -1,4 +1,4 @@
-
+// template Handlebars
 $(document).ready(function(){
 
 	var source=$("#entry-template").html();
@@ -6,7 +6,6 @@ $(document).ready(function(){
 
 		$.getJSON("data.json",function(data)
 		{
-
 			Handlebars.registerHelper('fullName',function (person) 
 			{
 				return person.firstName+" "+person.lastName;	
