@@ -1,0 +1,26 @@
+<head>
+    <script src="jquery.js"></script>    
+    <!--<script src="libs/backbone.js"></script>-->
+    <script src="handlebars-v3.0.0.js"></script>
+    <!--<script data-main="Modules/main" src="libs/require.js"></script>     -->
+    <script src="app.js"></script>
+</head>
+<body>
+<div class="container">
+    
+    <form id="search-form">
+        <input type="text" id="query" value="" class="form-control" placeholder="Type an Artist Name" />
+        <input type="submit" id="search" class="btn btn-primary" value="Search" />
+    </form>
+    
+    <div id="results"></div>
+</div>
+
+<script id="results-template" type="text/x-handlebars-template">
+    
+    {{#each albums.items}}
+    
+    <div style="background-image:url({{images.0.url}})" data-album-id="{{id}}" class="cover"></div>
+    {{/each}}
+</script>
+</body>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My api</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="author" content="Orecchia Maria Julieta">
+
+    <link type="text/css" rel="stylesheet" href="Css/style.css" />
+    <link href="Css/normalize.css" rel="stylesheet">
+    
+    <script src="libs/jquery.js"></script>    
+    <!--<script src="libs/backbone.js"></script>-->
+    <script src="libs/handlebars-v3.0.0.js"></script>
+    <!--<script data-main="Modules/main" src="libs/require.js"></script>     -->
+    <script src="Modules/prueba.js"></script>
+    
+</head>
+
+<body>
+    <div id="header">
+        <header class="header"></header>
+        <p>SPOTIFY API</p>
+    </div>
+
+    <div id="search">
+        
+            <input id='search-box' name='q'  size='28' type='text' placeholder='Buscar..' />
+            <input id="bsearch" type="submit" value="Search" />        
+
+    </div>
+
+    <div id="playList">
+        <div id="saveList">
+            <button class="saveList">Save play list</button>
+        </div>
+        <div id="select">
+            <select class="select">
+                <option>Select one</option>
+                <option>lista 1 </option>
+                <option>lista 2</option>
+            </select>
+        </div>
+    </div>
+
+    <div id="listenList">
+        <button class="listenList">Listen this play list</button>
+    </div>
+
+</body>
+
+</html>
