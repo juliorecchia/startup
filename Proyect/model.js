@@ -1,41 +1,83 @@
-$function () {
-	// model
+require.config({
+    baseUrl: 'js',
+    paths: {
+        jquery: '..libs/jquery',
+    }
+});
+requirejs(['jquery', 'prueba'],
+        $function() {
 
-	var Track=Backbone.Model.extend({
-		defaults:{
-			name:
-			artis:
-			duration:
-			album:
-		}
-	});
+            // model
+            var Track = Backbone.Model.extend({
+                defaults: function() {
+                    return {
+                        name: "No name",
+                        artist: "No artist",
+                        genres: "No genres",
+                        album: "No album".
+                    };
+                },
 
-	//Collection
+                initialize: function() {
+                    if (!this.get("track")) {
+                        this.set({
+                            "track": this.defaults.track
+                        });
+                    }
+                },
+                clear: function() {
+                    this.destroy();
+                }
+            });
 
-	var PlayList=Backbone.Collection.extend({
-		model: Track,
-	});
+            //Collection
 
-	var List = new PlayList;
+            var PlayList = Backbone.Collection.extend({
+                model: Track,
+            });
 
-	// Views
+            var List = new PlayList;
 
-	var PlayListView = Backbone.View.extend({
-		render: function(){
-			var  source = $(#Template).html();
-			var temp=Hanlebars.compile(source);
-			var html = temp (this.collection.toJSON());
-			this.$el.html(html);
-		}
-		initialize: function(){
-			this.collection.on('add',this.render,this);
-		}
-	});
+            // Views
 
-	var PlayList = new PlayList();
-	var PlayListView = new PlayListView({
-		collection: PlayList;
-	});
+            PlayListView = {};
 
+            PlayList = Backbone.View.extend({
 
-}
+                        events: {
+                            'click.bsearch': 'ClickSearch',
+                        },
+                        initialize: function() {
+                            PlayList.bind('add', this.addList);
+                            this.collection = PlayList;
+                        },
+                        clickSearch = function() {
+                            $('#bsearch').click(function() {
+                                        var srh = $('#search-box').val();
+                                        var ini = srh.replace(/ /g, '%20');
+                                        var obj = '/v1/search?q' + ini + '&type=track';
+                                        var data = JSON.parse(localStorage.getItem('getData'));
+                                        for (var i = 0; i < obj.tracks.items.length; i++) {
+
+                                            var tra = new track;
+                                            tra.set({
+                                                track: obj.tracks.items[i].name,
+                                                artist: obj.tracks.items[i].artists[1].name,
+                                                duration: obj.tracks.items[i].duration_ms,
+                                                album: obj.tracks.items[i].album.name
+                                            });
+                                            this.collection.add(tra);
+                                        };
+                                        localStorage.removeItem('getData');
+                                        $('#bsearch').val('');
+                                    },
+                                    addList: function(tra) {
+                                        var view = new musicView({
+                                                model: mus)
+                                        };
+                                        $("#search_list").append(view.render().el);
+                                        $("#search_list").listview('refresh');
+                                    }                               
+                                    // Falta definir musicView ..                               
+
+                        });
